@@ -15,3 +15,18 @@
 #        sum = sum * n
 #    return sum
 #计算多个数的乘积
+
+
+#def calc(numbers):
+#    sum = 0
+#    for n in numbers:
+#        sum = sum + n * n
+#    return sum
+#求a*a+b*b...
+#优化后
+#def calc(*number):
+#    sum = 0
+#    for n in number:
+#        sum = sum + n * n
+#    return sum
+#增加了可变参数...
