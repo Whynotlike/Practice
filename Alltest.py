@@ -31,3 +31,8 @@ def findminandmax(L):
 				max = i
 		return (min,max)
 #迭代：利用for...in求一个list中minAndmax输出tuple
+
+L1 = ['HELLO','WORLD',18,'APPLE',None]
+[L2.lower() for L2 in L1 if isinstance(L2,str)==True]
+#由于非字符串类型没有lower()方法，所以列表生成式会报错
+#修改列表生成式，通过添加if语句保证列表生成式能正确地执行
