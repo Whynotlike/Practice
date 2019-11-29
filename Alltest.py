@@ -50,16 +50,25 @@ def Fib(max):
 	return 'done'
 #用函数打印斐波拉契数列
 
-def ser():
-	L = [1]	  #定义并赋值
-	yield L
-	L = [1,1]
-	yield L
-	while True:
-		newL = [1] #每次初始化计算机
-		for i in range(1,len(L)): #确定长度
-			newL.append(L[i-1] + L[i])  #增加
-		newL.append(1) #末尾加1
-		L = newL #赋值
-		yield L
 #杨辉三角
+#方法一：
+#def ser():
+#	L = [1]	  #定义并赋值
+#	yield L
+#	L = [1,1]
+#	yield L
+#	while True:
+#		newL = [1] #每次初始化计算机
+#		for i in range(1,len(L)): #确定长度
+#			newL.append(L[i-1] + L[i])  #增加
+#		newL.append(1) #末尾加1
+#		L = newL #赋值
+#		yield L
+#方法二：
+def ser():
+        L = [1]
+        yield L
+        while 1:
+                yield L
+                L = [0] + L + [0]
+                L = [L[i] + L[i + 1] for i in range(len(L) - 1)]
